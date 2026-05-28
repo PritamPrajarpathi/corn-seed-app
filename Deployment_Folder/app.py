@@ -346,7 +346,7 @@ with main_col_1:
 
     if file_input:
         image = Image.open(file_input)
-        st.image(image, caption="Current Specimen", use_column_width=True)
+        st.image(image, caption="Current Specimen", use_container_width=True)
         
         if st.button("Run Analysis", use_container_width=True):
             with st.spinner("Analyzing..."):
@@ -397,6 +397,6 @@ with main_col_2:
         st.write("**Recent Scans Log:**")
         if len(st.session_state['history']) > 0:
             df_hist = pd.DataFrame(st.session_state['history'])
-            st.dataframe(df_hist.tail(5), use_column_width=True)
+            st.dataframe(df_hist.tail(5), use_container_width=True)
     else:
         st.info("Waiting for data... Scan a seed to see analytics.")
