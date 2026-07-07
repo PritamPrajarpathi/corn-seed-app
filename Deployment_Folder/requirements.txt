@@ -5,3 +5,5 @@ pillow
 numpy
 pandas
 altair
+numpy
+tensorflow-cpu
